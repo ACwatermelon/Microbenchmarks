@@ -438,7 +438,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/qianyi/Downloads/sysbench'
+ac_pwd='/home/qianyi/microbenchmarks/Sysbench/developer'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
@@ -837,7 +837,7 @@ S["am__EXEEXT_FALSE"]=""
 S["am__EXEEXT_TRUE"]="#"
 S["LTLIBOBJS"]=""
 S["LIBOBJS"]=""
-S["SB_GIT_SHA"]="-2651f24"
+S["SB_GIT_SHA"]="-61bf959"
 S["AM_LDFLAGS"]=""
 S["AM_CPPFLAGS"]=" -I$(top_srcdir)/src -I$(abs_top_builddir)/third_party/luajit/inc -I$(abs_top_builddir)/third_party/concurrency_kit/include"
 S["AM_CFLAGS"]="-Wall -Wextra -Wpointer-arith -Wbad-function-cast -Wstrict-prototypes -Wnested-externs -Wno-format-zero-length -Wundef -Wstrict-prototypes -Wmissing"\
@@ -929,12 +929,12 @@ S["mkdir_p"]="$(MKDIR_P)"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="strip"
-S["install_sh"]="${SHELL} /home/qianyi/Downloads/sysbench/config/install-sh"
-S["MAKEINFO"]="${SHELL} /home/qianyi/Downloads/sysbench/config/missing makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/qianyi/Downloads/sysbench/config/missing autoheader"
-S["AUTOMAKE"]="${SHELL} /home/qianyi/Downloads/sysbench/config/missing automake-1.15"
-S["AUTOCONF"]="${SHELL} /home/qianyi/Downloads/sysbench/config/missing autoconf"
-S["ACLOCAL"]="${SHELL} /home/qianyi/Downloads/sysbench/config/missing aclocal-1.15"
+S["install_sh"]="${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/install-sh"
+S["MAKEINFO"]="${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing autoheader"
+S["AUTOMAKE"]="${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing automake-1.15"
+S["AUTOCONF"]="${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing autoconf"
+S["ACLOCAL"]="${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing aclocal-1.15"
 S["VERSION"]="1.1.0"
 S["PACKAGE"]="sysbench"
 S["CYGPATH_W"]="echo"
@@ -1113,7 +1113,7 @@ D["HAVE_SETVBUF"]=" 1"
 D["HAVE_SQRT"]=" 1"
 D["HAVE_STRDUP"]=" 1"
 D["HAVE_VALLOC"]=" 1"
-D["SB_GIT_SHA"]=" \"-2651f24\""
+D["SB_GIT_SHA"]=" \"-61bf959\""
   for (key in D) D_is_set[key] = 1
   FS = ""
 }

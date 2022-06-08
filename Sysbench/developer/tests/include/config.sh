@@ -18,7 +18,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
-export SBTEST_VERSION_STRING="sysbench 1.1.0-2651f24"
+export SBTEST_VERSION_STRING="sysbench 1.1.0-61bf959"
 export SBTEST_VERSION="1.1.0"
 export SBTEST_HAS_MYSQL=
 export SBTEST_HAS_PGSQL=

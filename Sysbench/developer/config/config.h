@@ -207,7 +207,7 @@
 /* #undef PTHREAD_CREATE_JOINABLE */
 
 /* Git commit hash, if available. */
-#define SB_GIT_SHA "-2651f24"
+#define SB_GIT_SHA "-61bf959"
 
 /* Whether system or bundled Concurrency Kit is used */
 #define SB_WITH_CK "bundled"

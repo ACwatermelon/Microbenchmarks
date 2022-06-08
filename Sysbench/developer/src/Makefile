@@ -133,11 +133,11 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_sysbench_OBJECTS = hs_test.$(OBJEXT) dry.$(OBJEXT) \
-	sysbench.$(OBJEXT) sb_timer.$(OBJEXT) sb_options.$(OBJEXT) \
-	sb_logger.$(OBJEXT) db_driver.$(OBJEXT) sb_histogram.$(OBJEXT) \
-	sb_rand.$(OBJEXT) sb_thread.$(OBJEXT) sb_barrier.$(OBJEXT) \
-	sb_lua.$(OBJEXT) sb_util.$(OBJEXT) sb_counter.$(OBJEXT)
+am_sysbench_OBJECTS = test.$(OBJEXT) dry.$(OBJEXT) sysbench.$(OBJEXT) \
+	sb_timer.$(OBJEXT) sb_options.$(OBJEXT) sb_logger.$(OBJEXT) \
+	db_driver.$(OBJEXT) sb_histogram.$(OBJEXT) sb_rand.$(OBJEXT) \
+	sb_thread.$(OBJEXT) sb_barrier.$(OBJEXT) sb_lua.$(OBJEXT) \
+	sb_util.$(OBJEXT) sb_counter.$(OBJEXT)
 sysbench_OBJECTS = $(am_sysbench_OBJECTS)
 am__DEPENDENCIES_1 =
 #am__DEPENDENCIES_2 = drivers/mysql/libsbmysql.a \
@@ -261,7 +261,7 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/qianyi/Downloads/sysbench/config/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_CFLAGS = -Wall -Wextra -Wpointer-arith -Wbad-function-cast -Wstrict-prototypes -Wnested-externs -Wno-format-zero-length -Wundef -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wcast-align -Wvla   -pthread
 AM_CPPFLAGS =  -I$(top_srcdir)/src -I$(abs_top_builddir)/third_party/luajit/inc -I$(abs_top_builddir)/third_party/concurrency_kit/include -DDATADIR=\"$(pkgdatadir)\" \
@@ -269,9 +269,9 @@ AM_CPPFLAGS =  -I$(top_srcdir)/src -I$(abs_top_builddir)/third_party/luajit/inc 
 AM_DEFAULT_VERBOSITY = 1
 AM_LDFLAGS = 
 AR = ar
-AUTOCONF = ${SHELL} /home/qianyi/Downloads/sysbench/config/missing autoconf
-AUTOHEADER = ${SHELL} /home/qianyi/Downloads/sysbench/config/missing autoheader
-AUTOMAKE = ${SHELL} /home/qianyi/Downloads/sysbench/config/missing automake-1.15
+AUTOCONF = ${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing autoconf
+AUTOHEADER = ${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing autoheader
+AUTOMAKE = ${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing automake-1.15
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -311,7 +311,7 @@ LT_SYS_LIBRARY_PATH =
 LUAJIT_CFLAGS = -I$(abs_top_builddir)/third_party/luajit/inc
 LUAJIT_LDFLAGS = -rdynamic
 LUAJIT_LIBS = $(abs_top_builddir)/third_party/luajit/lib/libluajit-5.1.a -ldl
-MAKEINFO = ${SHELL} /home/qianyi/Downloads/sysbench/config/missing makeinfo
+MAKEINFO = ${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MYSQL_CFLAGS = 
@@ -340,7 +340,7 @@ PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
 RANLIB = ranlib
-SB_GIT_SHA = -2651f24
+SB_GIT_SHA = -61bf959
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
@@ -348,10 +348,10 @@ STRIP = strip
 USE_MYSQL = 
 USE_PGSQL = 
 VERSION = 1.1.0
-abs_builddir = /home/qianyi/Downloads/sysbench/src
-abs_srcdir = /home/qianyi/Downloads/sysbench/src
-abs_top_builddir = /home/qianyi/Downloads/sysbench
-abs_top_srcdir = /home/qianyi/Downloads/sysbench
+abs_builddir = /home/qianyi/microbenchmarks/Sysbench/developer/src
+abs_srcdir = /home/qianyi/microbenchmarks/Sysbench/developer/src
+abs_top_builddir = /home/qianyi/microbenchmarks/Sysbench/developer
+abs_top_srcdir = /home/qianyi/microbenchmarks/Sysbench/developer
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -381,7 +381,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/qianyi/Downloads/sysbench/config/install-sh
+install_sh = ${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -414,7 +414,7 @@ SUBDIRS = drivers tests lua .
 # The following check will be extended as new database drivers will be added
 #mysql_ldadd = drivers/mysql/libsbmysql.a $(MYSQL_LIBS)
 #pgsql_ldadd = drivers/pgsql/libsbpgsql.a $(PGSQL_LIBS)
-sysbench_SOURCES = hs_test.c dry.c sysbench.c sysbench.h sb_timer.c sb_timer.h \
+sysbench_SOURCES = test.c dry.c sysbench.c sysbench.h sb_timer.c sb_timer.h \
 sb_options.c sb_options.h sb_logger.c sb_logger.h sb_list.h db_driver.h \
 db_driver.c sb_histogram.c sb_histogram.h sb_rand.c sb_rand.h \
 sb_thread.c sb_thread.h sb_barrier.c sb_barrier.h sb_lua.c \
@@ -530,7 +530,6 @@ distclean-compile:
 
 include ./$(DEPDIR)/db_driver.Po
 include ./$(DEPDIR)/dry.Po
-include ./$(DEPDIR)/hs_test.Po
 include ./$(DEPDIR)/sb_barrier.Po
 include ./$(DEPDIR)/sb_counter.Po
 include ./$(DEPDIR)/sb_histogram.Po
@@ -542,6 +541,7 @@ include ./$(DEPDIR)/sb_thread.Po
 include ./$(DEPDIR)/sb_timer.Po
 include ./$(DEPDIR)/sb_util.Po
 include ./$(DEPDIR)/sysbench.Po
+include ./$(DEPDIR)/test.Po
 
 .c.o:
 	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

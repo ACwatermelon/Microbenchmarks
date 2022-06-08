@@ -133,11 +133,11 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_sysbench_OBJECTS = hs_test.$(OBJEXT) dry.$(OBJEXT) \
-	sysbench.$(OBJEXT) sb_timer.$(OBJEXT) sb_options.$(OBJEXT) \
-	sb_logger.$(OBJEXT) db_driver.$(OBJEXT) sb_histogram.$(OBJEXT) \
-	sb_rand.$(OBJEXT) sb_thread.$(OBJEXT) sb_barrier.$(OBJEXT) \
-	sb_lua.$(OBJEXT) sb_util.$(OBJEXT) sb_counter.$(OBJEXT)
+am_sysbench_OBJECTS = test.$(OBJEXT) dry.$(OBJEXT) sysbench.$(OBJEXT) \
+	sb_timer.$(OBJEXT) sb_options.$(OBJEXT) sb_logger.$(OBJEXT) \
+	db_driver.$(OBJEXT) sb_histogram.$(OBJEXT) sb_rand.$(OBJEXT) \
+	sb_thread.$(OBJEXT) sb_barrier.$(OBJEXT) sb_lua.$(OBJEXT) \
+	sb_util.$(OBJEXT) sb_counter.$(OBJEXT)
 sysbench_OBJECTS = $(am_sysbench_OBJECTS)
 am__DEPENDENCIES_1 =
 @USE_MYSQL_TRUE@am__DEPENDENCIES_2 = drivers/mysql/libsbmysql.a \
@@ -414,7 +414,7 @@ SUBDIRS = drivers tests lua .
 # The following check will be extended as new database drivers will be added
 @USE_MYSQL_TRUE@mysql_ldadd = drivers/mysql/libsbmysql.a $(MYSQL_LIBS)
 @USE_PGSQL_TRUE@pgsql_ldadd = drivers/pgsql/libsbpgsql.a $(PGSQL_LIBS)
-sysbench_SOURCES = hs_test.c dry.c sysbench.c sysbench.h sb_timer.c sb_timer.h \
+sysbench_SOURCES = test.c dry.c sysbench.c sysbench.h sb_timer.c sb_timer.h \
 sb_options.c sb_options.h sb_logger.c sb_logger.h sb_list.h db_driver.h \
 db_driver.c sb_histogram.c sb_histogram.h sb_rand.c sb_rand.h \
 sb_thread.c sb_thread.h sb_barrier.c sb_barrier.h sb_lua.c \
@@ -530,7 +530,6 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/db_driver.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dry.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hs_test.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sb_barrier.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sb_counter.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sb_histogram.Po@am__quote@
@@ -542,6 +541,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sb_timer.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sb_util.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sysbench.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

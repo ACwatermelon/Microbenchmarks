@@ -699,7 +699,7 @@ configure:6168: gcc -o conftest    conftest.c  >&5
 configure:6168: $? = 0
 configure:6168: ./conftest
 configure:6168: $? = 0
-configure:6178: result: 50657:37200800:7ffefbff:bfebfbff
+configure:6178: result: 50657:30200800:7ffefbff:bfebfbff
 configure:6381: checking whether C compiler accepts -march=core2
 configure:6400: gcc -c   -march=core2  conftest.c >&5
 configure:6400: $? = 0
@@ -933,11 +933,11 @@ conftest.c:40:22: warning: null argument where non-null required (argument 1) [-
    40 |                      pthread_create(0,0,0,0); pthread_cleanup_pop(0);
       |                      ^~~~~~~~~~~~~~
 conftest.c:40:22: warning: null argument where non-null required (argument 3) [-Wnonnull]
-/tmp/ccL2rOot.o: In function `main':
-/home/qianyi/Downloads/sysbench/conftest.c:38: undefined reference to `pthread_join'
-/home/qianyi/Downloads/sysbench/conftest.c:39: undefined reference to `__pthread_register_cancel'
-/home/qianyi/Downloads/sysbench/conftest.c:40: undefined reference to `pthread_create'
-/home/qianyi/Downloads/sysbench/conftest.c:40: undefined reference to `__pthread_unregister_cancel'
+/tmp/ccbioCxo.o: In function `main':
+/home/qianyi/microbenchmarks/Sysbench/developer/conftest.c:38: undefined reference to `pthread_join'
+/home/qianyi/microbenchmarks/Sysbench/developer/conftest.c:39: undefined reference to `__pthread_register_cancel'
+/home/qianyi/microbenchmarks/Sysbench/developer/conftest.c:40: undefined reference to `pthread_create'
+/home/qianyi/microbenchmarks/Sysbench/developer/conftest.c:40: undefined reference to `__pthread_unregister_cancel'
 collect2: error: ld returned 1 exit status
 configure:15342: $? = 1
 configure: failed program was:
@@ -1946,7 +1946,7 @@ configure:17083: $? = 0
 configure:17083: result: yes
 configure:17083: checking for directio
 configure:17083: gcc -o conftest  -pthread -D_GNU_SOURCE   conftest.c  -laio -lm  >&5
-/tmp/cc02cpix.o: In function `main':
+/tmp/cc1Vp5Tm.o: In function `main':
 conftest.c:(.text+0xa): undefined reference to `directio'
 collect2: error: ld returned 1 exit status
 configure:17083: $? = 1
@@ -2123,7 +2123,7 @@ configure:17083: $? = 0
 configure:17083: result: yes
 configure:17083: checking for thr_setconcurrency
 configure:17083: gcc -o conftest  -pthread -D_GNU_SOURCE   conftest.c  -laio -lm  >&5
-/tmp/cctnI6W4.o: In function `main':
+/tmp/cc3rIPA9.o: In function `main':
 conftest.c:(.text+0xa): undefined reference to `thr_setconcurrency'
 collect2: error: ld returned 1 exit status
 configure:17083: $? = 1
@@ -2297,7 +2297,7 @@ config.status:1385: config/config.h is unchanged
 config.status:1433: executing depfiles commands
 config.status:1433: executing libtool commands
 configure:19618: result: ===============================================================================
-configure:19620: result: sysbench version   : 1.1.0-2651f24
+configure:19620: result: sysbench version   : 1.1.0-61bf959
 configure:19622: result: CC                 : gcc
 configure:19624: result: CFLAGS             : -O3 -funroll-loops  -Wall -Wextra -Wpointer-arith -Wbad-function-cast -Wstrict-prototypes -Wnested-externs -Wno-format-zero-length -Wundef -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wcast-align -Wvla   -pthread
 configure:19626: result: CPPFLAGS           : -D_GNU_SOURCE   -I$(top_srcdir)/src -I$(abs_top_builddir)/third_party/luajit/inc -I$(abs_top_builddir)/third_party/concurrency_kit/include
@@ -2459,7 +2459,7 @@ ax_cv_c_compiler_vendor=gnu
 ax_cv_check_cflags___march_core2=yes
 ax_cv_gcc_archflag=-march=core2
 ax_cv_gcc_x86_cpuid_0=16:756e6547:6c65746e:49656e69
-ax_cv_gcc_x86_cpuid_1=50657:37200800:7ffefbff:bfebfbff
+ax_cv_gcc_x86_cpuid_1=50657:30200800:7ffefbff:bfebfbff
 ax_cv_have_func_attribute_format=yes
 ax_cv_have_func_attribute_unused=yes
 lt_cv_ar_at_file=@
@@ -2497,7 +2497,7 @@ sb_cv_lib_luajit=bundled
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/qianyi/Downloads/sysbench/config/missing aclocal-1.15'
+ACLOCAL='${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing aclocal-1.15'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -2510,9 +2510,9 @@ AM_DEFAULT_VERBOSITY='1'
 AM_LDFLAGS=''
 AM_V='$(V)'
 AR='ar'
-AUTOCONF='${SHELL} /home/qianyi/Downloads/sysbench/config/missing autoconf'
-AUTOHEADER='${SHELL} /home/qianyi/Downloads/sysbench/config/missing autoheader'
-AUTOMAKE='${SHELL} /home/qianyi/Downloads/sysbench/config/missing automake-1.15'
+AUTOCONF='${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing autoconf'
+AUTOHEADER='${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing autoheader'
+AUTOMAKE='${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing automake-1.15'
 AWK='mawk'
 CC='gcc'
 CCDEPMODE='depmode=gcc3'
@@ -2551,7 +2551,7 @@ LT_SYS_LIBRARY_PATH=''
 LUAJIT_CFLAGS='-I$(abs_top_builddir)/third_party/luajit/inc'
 LUAJIT_LDFLAGS='-rdynamic'
 LUAJIT_LIBS='$(abs_top_builddir)/third_party/luajit/lib/libluajit-5.1.a -ldl'
-MAKEINFO='${SHELL} /home/qianyi/Downloads/sysbench/config/missing makeinfo'
+MAKEINFO='${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/missing makeinfo'
 MANIFEST_TOOL=':'
 MKDIR_P='/bin/mkdir -p'
 MYSQL_CFLAGS=''
@@ -2580,7 +2580,7 @@ PTHREAD_CC='gcc'
 PTHREAD_CFLAGS='-pthread'
 PTHREAD_LIBS=''
 RANLIB='ranlib'
-SB_GIT_SHA='-2651f24'
+SB_GIT_SHA='-61bf959'
 SED='/bin/sed'
 SET_MAKE=''
 SHELL='/bin/sh'
@@ -2632,7 +2632,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/qianyi/Downloads/sysbench/config/install-sh'
+install_sh='${SHELL} /home/qianyi/microbenchmarks/Sysbench/developer/config/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
@@ -2741,6 +2741,6 @@ target_vendor='pc'
 #define HAVE_SQRT 1
 #define HAVE_STRDUP 1
 #define HAVE_VALLOC 1
-#define SB_GIT_SHA "-2651f24"
+#define SB_GIT_SHA "-61bf959"
 
 configure: exit 0
